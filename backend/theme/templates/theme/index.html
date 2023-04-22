@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-blue-800 overflow-x-hidden">
+    <div class=" bg-white flex flex-row space-x-[1100px] h-[75px] ">
+        <img src="logo.png" alt="logo" class="w-[300pxpx] h-[65px] mb-2 mt-2 ml-[20px]">
+        <nav>
+            <ul class="flex flex-row space-x-8 mt-[20px]">
+                
+                <a href="aboutus.html" ><li class="list-items">About Us</li></a>
+                <a href="researchpaper.html" ><li class="list-items">Research paper</li></a>
+               
+            </ul>
+            
+        </nav>
+    </div>
+
+    <div class=" bg-blue-900 h-[85px] shadow-2xl ">
+        <p class="text-white text-5xl font-semibold ml-[20px] mt-[30px] pt-[15px] font-sans">A Network Traffic Analysis Tool</p>
+
+    </div>
+    <div>
+        <p class="text-white text-2xl ml-[20px] mt-[15px] pt-[15px] font-sans"><b>NetWatch</b> is a network protocol analyzer.<br>
+            It lets you capture and interactively browse the 
+            traffic running on a computer network.<br>
+        </p>
+        <br>
+
+        <!--
+            Have a drop down here with options: ICMP, UDP, TCP, All
+            It should accordingly redirect you to http://127.0.0.1:8000/?filter={option selected}
+            For all, Forward instead to http://127.0.0.1:8000/ 
+        -->
+
+        <!-- <button onclick="location.href = 'http://127.0.0.1:8000/'" class="border-4 border-black w-[200px] ml-[20px] bg-gray-100 h-[55px] rounded-lg text-blue-800 font-bold mt-[30px] hover:scale-110 ">Get started</button> -->
+        <div class="flex justify-center">
+            <div class="w-40vw">
+              <div class="relative">
+                <label for="filter-dropdown" class="mr-2">Filter by:</label>
+                <select id="filter-dropdown" onchange="handleFilterChange()" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                  <option value="" selected disabled>Select an option</option>
+                  <option value="all">All</option>
+                  <option value="ICMP">ICMP</option>
+                  <option value="UDP">UDP</option>
+                  <option value="TCP">TCP</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M14.95 6.95l-4.242 4.242-4.242-4.242-1.414 1.414 4.242 4.242-4.242 4.242 1.414 1.414 4.242-4.242 4.242 4.242 1.414-1.414-4.242-4.242 4.242-4.242-1.414-1.414z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+          function handleFilterChange() {
+            const selectedValue = document.getElementById('filter-dropdown').value;
+            if (selectedValue === '') {
+              return; // Do nothing if empty option is selected
+            }
+            const url = selectedValue === 'all' ? 'http://127.0.0.1:8000/' : `http://127.0.0.1:8000/?filter=${selectedValue}`;
+            window.location.href = url;
+          }
+          </script>
+          
+          
+          
+        <br>
+        <br>
+
+        <!-- information div from here-->
+
+
+        <div class="bg-black bg-opacity-10 text-white ml-[20px] w-[1000px] h-[150px] pt-[20px] leading-7 font-semibold hidden" id="knowmore">
+            NetWatch is a comprehensive solution combining packet sniffing and network mapping to identify potential vulnerabilities<br>
+            and threats in large-scale computer networks, leveraging open-source tools and libraries to create a user-friendly<br>
+            and accessible web-based platform for network administrators.
+        </div>
+    </div>
+
+    
+
+    <script>
+       
+
+        function toggle(){
+            location.href="aboutus.html";
+        }
+            
+    </script>
+    
+    
+</body>
+</html>

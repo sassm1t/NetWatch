@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-blue-800 overflow-x-hidden">
+    <div class=" bg-white flex flex-row space-x-[1050px] h-[75px] ">
+        <img src="logo.png" alt="logo" class="w-[300pxpx] h-[65px] mb-2 mt-2 ml-[20px]">
+        <nav>
+            <ul class="flex flex-row space-x-8 mt-[20px]">
+                <a href="index.html" ><li class="list-items">Home</li></a>
+                <a href="aboutus.html" ><li class="list-items">About Us</li></a>
+                <a href="researchpaper.html" ><li class="list-items">Research paper</li></a>
+            </ul>
+            
+        </nav>
+    </div>
+
+    <div class=" bg-blue-900 h-[85px] shadow-2xl ">
+        <p class="text-white text-5xl font-semibold ml-[20px] mt-[30px] pt-[15px] font-sans">A Network Traffic Analysis Tool</p>
+
+    </div>
+</body>
+</html>

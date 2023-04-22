@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.list-items{
+    @apply font-bold text-black  hover:scale-110 hover:cursor-pointer hover:underline shadow-blue-900 text-[17px]
+}

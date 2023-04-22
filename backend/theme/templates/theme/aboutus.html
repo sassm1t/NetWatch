@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-white overflow-x-hidden">
+    <div class=" bg-white flex flex-row space-x-[1050px] h-[75px] drop-shadow-xl ">
+        <img src="logo.png" alt="logo" class="w-[300pxpx] h-[65px] mb-2 mt-2 ml-[20px]">
+        <nav>
+            <ul class="flex flex-row space-x-8 mt-[20px]">
+                <a href="index.html" ><li class="list-items">Home</li></a>
+                <a href="aboutus.html" ><li class="list-items">About us</li></a>
+                <a href="researchpaper.html" ><li class="list-items">Research paper</li></a>
+            </ul>
+            
+        </nav>
+    </div>
+
+    <div class=" bg-blue-900 h-[85px]">
+        <p class="text-white text-5xl font-semibold ml-[20px] mt-[30px] pt-[15px] font-sans">About us</p>
+    </div>
+
+    <div class="flex flex-row space-x-[100px] mt-[50px] font-semibold text-2xl ml-[20px] ">
+
+        
+        <p class="leading-[55px] font-sans font-medium bg-gray-400 bg-opacity-10 h-[530px] ml-[20px] rounded-[50px] pl-[20px] pt-5 pr-5 opacity-80">
+            We are students of Bennett University who have recently completed NetWatch, a packet sniffing project which helped us better grasp network protocols and the data that is sent between devices. Through this project, we were able to improve our network analysis abilities and get a greater understanding of the significance of network security.
+            <br>
+            
+            This project is a comprehensive solution combining packet sniffing and network mapping to identify potential vulnerabilities
+            and threats in large-scale computer networks, leveraging open-source tools and libraries to create a user-friendly
+            and accessible web-based platform for network administrators.
+        </p>
+        <img src="logo.png" alt="image" class="w-[440px] h-[350px] pr-[25px]">
+
+    </div>
+</body>
+</html>
